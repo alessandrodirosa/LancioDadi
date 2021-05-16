@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LancioDadi</string>
+    <string name="lancia_dado_label_button">Lancia dado</string>
+</resources>
