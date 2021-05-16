@@ -6,26 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/valoreDadoTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="34sp"
+    <ImageView
+        android:id="@+id/dadoImageView"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/content_description_dado_image"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="1" />
+        tools:srcCompat="@drawable/dice_1" />
 
     <Button
         android:id="@+id/lancioDadoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/lancia_dado_label_button"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/valoreDadoTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/dadoImageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

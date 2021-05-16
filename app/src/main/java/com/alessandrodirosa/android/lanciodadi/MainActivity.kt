@@ -3,6 +3,7 @@ package com.alessandrodirosa.android.lanciodadi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -14,13 +15,24 @@ class MainActivity : AppCompatActivity() {
         lanciaDadoButton.setOnClickListener{
             lanciaDado()
         }
+        lanciaDado()
     }
 
     private fun lanciaDado() {
         val myDado = Dado()
+        val dadoImage :ImageView = findViewById(R.id.dadoImageView)
+        val numeroEstratto = myDado.lancia()
+        val drawableImageResource = when (numeroEstratto){
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else ->  R.drawable.dice_6
+        }
+        dadoImage.setImageResource(drawableImageResource)
+        dadoImage.contentDescription = numeroEstratto.toString()
         Toast.makeText(this,"Dado lanciato!",Toast.LENGTH_SHORT).show()
-        val valoreDadoTxt : TextView = findViewById(R.id.valoreDadoTxt)
-        valoreDadoTxt.text = myDado.lancia().toString()
     }
 }
 

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LancioDadi</string>
     <string name="lancia_dado_label_button">Lancia dado</string>
+    <string name="content_description_dado_image">Numero estratto</string>
 </resources>
